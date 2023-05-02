@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     
     # my app
     "apps.Anbardari.apps.AnbardariConfig",
-    "apps.Bazargardan.apps.BazargardanConfig",
     "apps.Foroosh.apps.ForooshConfig",
     
     # framework

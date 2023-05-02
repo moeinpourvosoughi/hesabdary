@@ -3,9 +3,8 @@ from rest_framework.views import APIView
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from .models import *
-
-
-
+from django.db.models import Sum
+##for anbardar to be able to add - delete products
 class ProductView(APIView):
     permission_classes = [permissions.AllowAny]
 
@@ -41,3 +40,8 @@ class ProductView(APIView):
         product.price = data['price']
         product.number = data['number']
         product.add_date = data['AddDate']
+
+##for showing the Total in admin dashboard
+def Items_total_sell_price():
+    print(models.sell_price_total)
+
